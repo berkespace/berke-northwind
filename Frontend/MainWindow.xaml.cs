@@ -26,14 +26,21 @@ namespace Frontend
         public MainWindow()
         {
             InitializeComponent();
-            PListBox.ItemsSource = products;
-            PListBox.DisplayMemberPath = " ";
+           UpdateBinding();
         }
 
+        private void UpdateBinding()
+        {
+
+            PListBox.ItemsSource = products;
+            PListBox.DisplayMemberPath = "FullInfo";
+        }
         private void PSearchButton_Click(object sender, RoutedEventArgs e)
         {
+            
             DataAccess db = new DataAccess();
-          products = db.GetProducts(PsearchTextbox.Text); 
+            products = db.GetProduct(PsearchTextbox.Text);
+            UpdateBinding();
         }
     }
 }

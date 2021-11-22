@@ -7,6 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Canvas>
+            <ListBox x:Name="PListBox" Height="217" Width="223" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="63"  Canvas.Top="99" Background="White" BorderBrush="Black"/>
+            <TextBox x:Name="PsearchTextbox" Canvas.Left="139" TextWrapping="Wrap" Canvas.Top="40" Width="120"/>
+            <Label Content="Product Name" Canvas.Left="48" Canvas.Top="36"/>
+            <Button x:Name="PSearchButton" Content="Search" Canvas.Left="139" Canvas.Top="74" Click="PSearchButton_Click"/>
+        </Canvas>
     </Grid>
 </Window>
