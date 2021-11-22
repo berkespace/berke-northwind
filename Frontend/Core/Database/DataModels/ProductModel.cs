@@ -24,7 +24,7 @@ namespace Frontend.Core.Database.DataModels
         {
             get
             {
-                   return $"{ProductID} {ProductName} {SupplierID}";
+                   return $"{ProductID} {ProductName} {SupplierID} {CategoryID}";
             }
         }
         
